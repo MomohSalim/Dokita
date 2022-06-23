@@ -48,7 +48,12 @@
 .nav-bar ul li a.home {
     text-decoration: underline;
     padding-right: 50px;
+    
 }
+/* .nav-bar ul li a.home:hover{
+    color: ;
+    text-decoration: none;
+} */
 
 .nav-bar ul li a.aboutus {
     text-decoration: none;
@@ -159,28 +164,26 @@
 
 .hero .four {
     width: 100%;
-    /* height: 90px; */
-    /* background-color: aliceblue; */
     padding-top: 70px;
     display: flex;
     justify-content: center;
 }
 
-.hero .four a {
+.hero .four button {
     text-decoration: none;
     background: #328ac9;
     color: #f3f3f0;
     border-radius: 5px;
-    box-sizing: border-box;
     padding: 10px 35px 10px 35px;
+    animation: breath 5s ease infinite;
 }
 
 .hero .five {
     width: 100%;
     height: 40px;
-    /* background-color: blue; */
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
-
 .hero .five p {
     font-family: 'Montserrat';
     font-style: normal;
@@ -230,11 +233,10 @@
     height: auto;
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 .hero .seven .logos{
     width: 15%;
     display: flex;
     justify-content: space-around;
 }
-
