@@ -26,12 +26,11 @@
     top: 20px;
     right: 100px;
 }
-
 .nav-bar ul li {
     display: inline;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 30px;
     font-style: normal;
     color: #328ac9;
@@ -88,12 +87,15 @@
     color: #f3f3f0;
     border: 5px solid #328ac9;
     box-sizing: border-box;
-    padding: 6px 35px 10px 35px;
+    padding: 6px 30px 10px 30px;
 }
 .nav-bar ul li a.booknow:hover{
     background: #151b54;
     border: 5px solid #151b54;
     color: wheat;
+}
+.nav-bar .hm{
+    display: block;
 }
 /* .blur{
     width: 100%;
@@ -105,7 +107,7 @@
 .hero {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 900px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -119,26 +121,33 @@
 }
 .hero .one {
     width: 100%;
-    height: 125px;
+    height: 150px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
 }
 
 .hero .one h6 {
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 60px;
     line-height: 62.5px;
-    color: #328ac9;
+    color: #ffffff;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    padding-top: 40px;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .hero .two {
     width: 100%;
-    height: 75px;
+    height: 150px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
 }
 
 .hero .two h6 {
@@ -146,7 +155,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
-    color: #328ac9;
+    color: #151b54;
     display: flex;
     text-align: center;
     align-items: center;
@@ -157,8 +166,17 @@
 
 .hero .three {
     width: 100%;
-    height: 75px;
-    /* background-color: blue; */
+    height: 100px;
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: center;
+}
+.hero .three .three1 {
+    width: 75%;
+    height: 100px;
+    /* background-color: darkblue; */
+    display: flex;
+    justify-content: center;
 }
 
 .hero .three p {
@@ -168,37 +186,55 @@
     font-size: 30px;
     color: #f3f3f0;
     display: flex;
+    justify-self: center;
     text-align: center;
-    padding-top: 0px;
+    /* padding-top: 0px; */
     line-height: 37px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding-right: 16.60%;
-    padding-left: 16.60%;
+    /* padding-right: 16.60%;
+    padding-left: 16.60%; */
 }
 
 .hero .four {
     width: 100%;
-    padding-top: 70px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
+    /* background-color: firebrick; */
 }
 
 .hero .four p {
     text-decoration: none;
-    background: #328ac9;
+    background: #151b54;
     color: #f3f3f0;
-    border: 5px solid #328ac9;
+    border: 5px solid #151b54;
     border-radius: 5px;
     padding: 10px 35px 10px 35px;
-    animation: breathing 5s ease-out infinite;
+    /* animation: breathing 5s ease-out infinite; */
+    animation: breath 2s ease infinite;
 }
+@keyframes breath {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.7);
+    }
+    100%{
+        transform: scale(1);
+    }
 
+}
 .hero .five {
     width: 100%;
-    height: 40px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    height: 100px;
+    /* margin-top: 40px;
+    margin-bottom: 20px; */
+    display: flex;
+    justify-content: center;
+    /* background-color: gold; */
 }
+
 .hero .five p {
     font-family: 'Montserrat';
     font-style: normal;
@@ -209,7 +245,7 @@
     text-align: center;
     align-items: center;
     line-height: 30px;
-    padding-left: 32.8%;
+    /* padding-left: 32.8%; */
 }
 
 .hero .six {
@@ -217,7 +253,6 @@
     height: auto;
     display: flex;
     justify-content: center;
-
     /* background-color: cadetblue; */
 }
 
@@ -248,11 +283,29 @@
     height: auto;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 30px;
+    /* background-color: hotpink; */
+    background: none;
     /* padding-bottom: 10px; */
 }
 .hero .seven .logos{
     width: 25%;
     display: flex;
     justify-content: space-around;
+    padding-top: 25px;
+}
+.hero .seven .logos .lo{
+    color: #ffffff;    
+}
+
+@media screen and (max-width: 600px){
+    .hero{
+        background-size: 100%;
+    }  
+    .nav-bar ul li {
+        display: none;
+    }
+    .nav-bar .hm{
+        display: block;
+    }
 }
