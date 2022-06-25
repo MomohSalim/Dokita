@@ -1,217 +1,197 @@
-* {
-    padding: 0px;
-    margin: 0px;
+*{
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Quicksand', sans-serif;
 }
+html{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #328ac9;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f8f8f8;
+}
 
-.nav-bar {
+/* @font-face{
+    font-family: Californian FB;
+    src: url(./fonts/CALIFB.TTF);
+} */
+
+/* NAV STARTS */
+nav{
     width: 100%;
-    height: 80px;
-    background: rgba(243, 243, 240, 0.9);
-    border: 1px solid #328ac9;
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    height: 5rem;
+    background-color: #fff;
+    position: fixed;
+    top: 0; 
+    z-index: 1000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
 }
-
-.nav-bar img {
-    width: 70px;
-    height: 76px;
-    padding-left: 100px;
-    padding-top: 2px;
+nav .logo{
+    width: 100%;
+    display: inline;
+    margin-left: 5rem;
 }
-
-.nav-bar ul {
+nav .logo img{
+    margin-top: 0.2rem;
+    width: 55px;
+}
+nav svg{
+    display: none;
+}
+nav #close{
+    display: none;
+}
+nav ul{
     float: right;
     position: relative;
-    top: 20px;
-    right: 100px;
+    margin-top: 1.2rem;
+    margin-right: 5rem;
 }
-.nav-bar ul li {
+nav ul .logo2{
+    display: none;
+}
+nav ul .border{
+    display: none;
+}
+nav li{
     display: inline;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    font-style: normal;
-    color: #328ac9;
-    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-    text-decoration-line: none;
-    text-transform: capitalize;
+    margin-left: 2rem;
 }
-
-.nav-bar ul li a {
+nav ul li a{
+    color: #151b54;
     text-decoration: none;
+}
+nav ul li a:hover{
     color: #328ac9;
 }
-
-.nav-bar ul li a.home {
+nav ul li a.active{
+    color: #328ac9;
     text-decoration: underline;
-    padding-right: 50px;    
 }
-.nav-bar ul li a.home:hover{
-    text-decoration: none;
+nav ul li a.dropdown-toggle{
+    background-color: transparent; 
+    color: #151b54; 
+    border: none;
+    margin-top: -0.2rem;
+}
+nav ul li a.dropdown-toggle:hover{
+    text-decoration: underline;
+    color: #328ac9;
+    background-color: transparent;
+    border: none;
+}
+nav ul li a.dropdown-toggle:focus{
+    text-decoration: underline;
+    color: #328ac9;
+    background-color: transparent;
+}
+nav ul li #dropdownMenuLink.active{
+    background-color: transparent;
+    color: #328ac9;
+    border: none;
+}
+nav ul li .btn:active{
+    border: none;
+}
+nav ul li a.dropdown-item{
+    margin-top: -1rem;
     color: #151b54;
-}
-
-.nav-bar ul li a.aboutus {
-    text-decoration: none;
-    padding-right: 40px;
-}
-.nav-bar ul li a.aboutus:hover{
-    text-decoration: none;
-    color: #151b54;
-}
-
-.nav-bar ul li a.login {
-    text-decoration: none;
-    padding-right: 30px;
-}
-.nav-bar ul li a.login:hover{
-    text-decoration: none;
-    color: #151b54;
-}
-
-.nav-bar ul li a.signup {
-    text-decoration: none;
-    padding-right: 20px;
-}
-.nav-bar ul li a.signup:hover{
-    text-decoration: none;
-    color: #151b54;
-}
-
-.nav-bar ul li a.booknow {
-    text-decoration: none;
-    border-radius: 8px;
-    background: #328ac9;
-    color: #f3f3f0;
-    border: 5px solid #328ac9;
-    box-sizing: border-box;
-    padding: 6px 30px 10px 30px;
-}
-.nav-bar ul li a.booknow:hover{
-    background: #151b54;
-    border: 5px solid #151b54;
-    color: wheat;
-}
-.nav-bar .hm{
-    display: block;
-}
-/* .blur{
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.459);
-    position: fixed;
-    z-index: 10;
-} */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 900px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-flow: row wrap;
-    background-image: url(images/interior-view-operating-room.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-} 
-.text{
-    z-index: 20;
-}
-.hero .one {
-    width: 100%;
-    height: 150px;
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: center;
-}
-
-.hero .one h6 {
-    font-family: 'Quicksand', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 62.5px;
-    color: #ffffff;
-    display: flex;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
+}
+nav ul li a.dropdown-item:hover{
+    background-color: #328ac9;
+    color: #fff;
+}
+nav i:hover{
+    color: #328ac9;
 }
 
-.hero .two {
-    width: 100%;
-    height: 150px;
-    /* background-color: blue; */
-    display: flex;
-    justify-content: center;
-}
-
-.hero .two h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    color: #151b54;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    line-height: 49px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.hero .three {
-    width: 100%;
-    height: 100px;
-    /* background-color: chartreuse; */
-    display: flex;
-    justify-content: center;
-}
-.hero .three .three1 {
-    width: 75%;
-    height: 100px;
-    /* background-color: darkblue; */
-    display: flex;
-    justify-content: center;
-}
-
-.hero .three p {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    color: #f3f3f0;
-    display: flex;
-    justify-self: center;
-    text-align: center;
-    /* padding-top: 0px; */
-    line-height: 37px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    /* padding-right: 16.60%;
-    padding-left: 16.60%; */
-}
-
-.hero .four {
-    width: 100%;
-    padding-top: 50px;
-    display: flex;
-    justify-content: center;
-    /* background-color: firebrick; */
-}
-
-.hero .four p {
-    text-decoration: none;
-    background: #151b54;
-    color: #f3f3f0;
-    border: 5px solid #151b54;
+.book{
+    padding: 10px 40px;
     border-radius: 5px;
-    padding: 10px 35px 10px 35px;
-    /* animation: breathing 5s ease-out infinite; */
+    color: #fff;
+    font-weight: 600;
+    background-color: #328ac9;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.book:hover{
+    background-color: #151b54;
+    color: #fff;
+}
+.book.active{
+    color: #fff;
+}
+
+.btn-check:active+.btn, .btn-check:checked+.btn, .btn.active, .btn.show, .btn:active {
+    color: #151b54;
+    background-color: transparent;
+    border-color: #fff;
+}
+/* NAV ENDS */
+
+
+/* HERO STARTS */
+.hero{
+    width: 100%;
+    height: 110vh;
+    background-image: url(images/interior-view-operating-room.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.hero .text{
+    text-align: center;
+    margin-top: 4rem;
+}
+.hero .text h2{
+    color: #328ac9;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.hero .text h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Quicksand', sans-serif;;
+}
+.hero .text .prov{
+    width: 70%;
+    margin: auto;
+    color: #328ac9;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.hero .text #coming-soon{
     animation: breath 2s ease infinite;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+.hero .text #coming-soon a{
+    color: #fff;
+    font-weight: 400;
+    font-size: 2.2rem;
+    padding: 5px 20px;
+    border: 3px solid #328ac9;
+    background-color: #151b54;
+    border-radius: 5px;
+    white-space: nowrap;
+    line-height: 100px;
+    transform: translateX(100%);
 }
 @keyframes breath {
     0%{
@@ -223,89 +203,194 @@
     100%{
         transform: scale(1);
     }
-
 }
-.hero .five {
-    width: 100%;
-    height: 100px;
-    /* margin-top: 40px;
-    margin-bottom: 20px; */
-    display: flex;
-    justify-content: center;
-    /* background-color: gold; */
+.hero .text .first{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
-
-.hero .five p {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    color: #ffffff;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    line-height: 30px;
-    /* padding-left: 32.8%; */
+.hero .text #email{
+    width: 35%;
+    padding: 20px;
+    background-color: transparent;
+    border: 3px solid #328ac9;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
 }
-
-.hero .six {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    /* background-color: cadetblue; */
+.hero .text #email::placeholder{
+    color: rgba(255, 255, 255, 0.712);
+    font-size: 1.2rem;
 }
-
-.hero .six form {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-}
-.hero .six form #email {
-    width: 300px;
-    padding: 15px;
-    border: 2px solid #328ac9;
-    background: transparent;
-
-}
-.hero .six form #email::placeholder{
-    color: #ffffff;
-}
-.hero .six form #submit{
-    width: 90px;
-    padding: 7px;
-    border: 2px solid #328ac9;
+.hero .text #notify{
+    width: 15%;
     background-color: #328ac9;
-    color: #ffffff;
+    color: #fff;
+    height: 3.2rem;
+    border: none;
+    margin-left: -0.4rem;
+    border-radius: 0 5px 5px 0;
+    font-size: 0.975rem;
+    cursor: pointer;
 }
-.hero .seven{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    /* background-color: hotpink; */
-    background: none;
-    /* padding-bottom: 10px; */
+.hero .text #notify:hover{
+    background-color: #151b54;
+    color: #fff;
 }
-.hero .seven .logos{
-    width: 25%;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 25px;
+.hero .text .success{
+    margin-top: 1rem;
+    color: #fff;
+    display: none;
 }
-.hero .seven .logos .lo{
-    color: #ffffff;    
+.hero .socials{
+    margin-top: 2rem;
 }
+.hero .socials img{
+    width: 40px;
+    margin-right: 1rem;
+    justify-content: space-around
+}
+/* HERO ENDS */
 
-@media screen and (max-width: 600px){
-    .hero{
-        background-size: 100%;
-    }  
-    .nav-bar ul li {
+
+/* RESPONSIVENESS STARTS */
+@media screen and (max-width:1000px){
+    nav{
+        height: 13vh;
+        border-bottom: 1px solid #328ac9;
+        z-index: 1000000;
+    }
+    nav .logo img{
+        margin-top: 0.3rem;
+        margin-left: -3rem;
+        width: 60px;
+    }
+    nav svg{
+        display: block;
+        float: right;
+        margin: 1.8rem 2rem 0 2rem;
+    }
+    nav #close{
+        display: none;
+        font-size: 35px;
+        color: #328ac9;
+        float: right;
+        margin: 1.8rem 2rem 0 2rem;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: white;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.26);
+        padding-top: 0.3rem;
+        margin-top: -2rem;
+        top: 2rem;
+    }
+    nav ul .dropdown-menu{
+        height: fit-content;
+    }
+    nav ul .logo2{
+        display: block;
+        height: 5rem;
+    }
+    nav ul .logo2 img{
+        width: 60px;
+    }
+    nav ul .border{
+        width: 100%;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 1rem;
+        margin-left: 0rem;
+        margin-bottom: 1.5rem;
+    }
+    nav ul li a{
+        font-size: 1.2rem;
+        transition: 0.3s;
+    }
+    nav ul .links li #search{
         display: none;
     }
-    .nav-bar .hm{
-        display: block;
+    nav .links{
+        margin-top: 2rem;
     }
+    nav .book{
+        padding: 5% 15% ;
+        font-size: 1.2rem;
+    }
+    nav ul li #dropdownMenuLink{
+        font-size: 1.2rem;
+        margin-left: -0.8rem;
+    }
+    .hero{
+        height: 120vh;
+        background-image: url(images/interior-view-operating-room.jpg);
+        margin-top: 13vh;
+    }
+    #blur{
+        display: none;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .hero .text{
+        margin-top: -4rem;
+    }
+    .hero .text h2{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .hero .text h1{
+        width: 90%;
+        margin: auto;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+   }
+    .hero .text .prov{
+        width: 90%;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .hero .text a{
+        font-size: 2rem;
+    }
+    .hero .text .first{
+        width: 90%;
+        margin: auto;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .hero .text #email{
+        width: 30%;
+        padding: 15px;
+        font-size: 1.1rem;
+        color: #fff;
+    }
+    .hero .text #email::placeholder{
+        font-size: 1rem;
+    }
+    .hero .text #notify{
+        width: 15%;
+        height: 2.5rem;
+        margin-left: -0.4rem;
+        font-size: 0.975rem;
+    }
+    .hero .socials{
+        margin-top: 2rem;
+    }
+    .hero .socials img{
+        width: 5%;
+        margin-right: 0.5rem;
+    }    
 }
+/* RESPONSIVENESS ENDS */
