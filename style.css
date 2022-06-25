@@ -342,7 +342,7 @@ nav i:hover{
         background-color: rgba(0, 0, 0, 0.3);
     }
     .hero .text{
-        margin-top: -4rem;
+        margin-top: 4rem;
     }
     .hero .text h2{
         font-size: 2rem;
@@ -373,13 +373,14 @@ nav i:hover{
         justify-content: center;
     }
     .hero .text #email{        
-        width: 70%;
+        width: 60%;
         padding: 15px;
         font-size: 1.1rem;
         color: #fff;
         display: flex;
         flex-flow: row wrap;
-        margin-left: 4rem;
+        margin-left: 20%;
+        margin-right: 20%;
     }
     .hero .text #email::placeholder{
         font-size: 1rem;
