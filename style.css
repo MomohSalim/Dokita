@@ -186,7 +186,7 @@ nav i:hover{
     font-weight: 400;
     font-size: 2.2rem;
     padding: 5px 20px;
-    border: 3px solid #328ac9;
+    /* border: 3px solid #328ac9; */
     background-color: #151b54;
     border-radius: 5px;
     white-space: nowrap;
@@ -212,7 +212,7 @@ nav i:hover{
 }
 .hero .text #email{
     width: 35%;
-    padding: 20px;
+    padding: 15px;
     background-color: transparent;
     border: 3px solid #328ac9;
     border-radius: 5px;
@@ -225,7 +225,7 @@ nav i:hover{
     font-size: 1.2rem;
 }
 .hero .text #notify{
-    width: 15%;
+    width: 12.5%;
     background-color: #328ac9;
     color: #fff;
     height: 3.2rem;
@@ -331,7 +331,7 @@ nav i:hover{
     .hero{
         height: 120vh;
         background-image: url(images/interior-view-operating-room.jpg);
-        margin-top: 13vh;
+        /* margin-top: 13vh; */
     }
     #blur{
         display: none;
