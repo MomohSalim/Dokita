@@ -170,7 +170,7 @@ nav i:hover{
 .hero .text .prov{
     width: 70%;
     margin: auto;
-    color: #328ac9;
+    color: #fff;
     font-weight: 400;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
@@ -259,7 +259,7 @@ nav i:hover{
 @media screen and (max-width:1000px){
     nav{
         height: 13vh;
-        border-bottom: 1px solid #328ac9;
+        /* border-bottom: 1px solid #328ac9; */
         z-index: 1000000;
     }
     nav .logo img{
